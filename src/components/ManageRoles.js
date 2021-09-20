@@ -1,64 +1,72 @@
 import React, { useState } from 'react';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
-import { FaUsers, FaUserCog,FaDownload, FaPlus,FaSearch } from "react-icons/fa";
+import { FaUsers, FaUserCog, FaDownload, FaPlus, FaSearch, FaSquarespace, FaCircleNotch } from "react-icons/fa";
 import { FormControl, InputGroup, Table } from 'react-bootstrap';
-import GroupsTable from './GroupsTable';
+import UsersTable from './UsersTable';
 
-const ManageGroups = () => {
+const ManageRoles = () => {
 
     // Fake Data
-    const groups = [
+    const users = [
         {
             id: 89651,
-            name: 'Support Group',
-            details: 'Sopports Live Customers',
+            name: 'John Doe',
+            userName: 'John Doe',
+            email: 'john@example.com',
             date: '8:00 PM 19 sep 2021'
         },
         {
             id: 89652,
-            name: 'Ticket Group',
-            details: 'Check Teckets',
+            name: 'Mr Rathor',
+            userName: 'Mr Rathor',
+            email: 'mr@example.com',
             date: '8:00 PM 19 sep 2021'
         },
         {
             id: 89653,
-            name: 'Call Group',
-            details: 'Handle Customer calling for leads',
+            name: 'Michel ab',
+            userName: 'Michel ab',
+            email: 'ab@example.com',
             date: '8:00 PM 19 sep 2021'
         },
         {
             id: 89654,
-            name: 'Chat Group',
-            details: 'Sopports Live Customers',
+            name: 'Omar Abdullah',
+            userName: 'Omar Abdullah',
+            email: 'omar@example.com',
             date: '8:00 PM 19 sep 2021'
         },
         {
             id: 89655,
-            name: 'Manager Sylhet',
-            details: 'Sylhet Manager',
+            name: 'John Dalton',
+            userName: 'John Dalton',
+            email: 'johnd@example.com',
             date: '8:00 PM 19 sep 2021'
         },
         {
             id: 89656,
-            name: 'Manager Dhaka',
-            details: 'Dhaka Manager',
+            name: 'Provati v',
+            userName: 'Provati v',
+            email: 'provati@example.com',
             date: '8:00 PM 19 sep 2021'
         },
         {
             id: 89657,
-            name: 'Support Group',
-            details: 'Sopports Live Customers',
+            name: 'R karim',
+            userName: 'R Karim',
+            email: 'rkarim@example.com',
             date: '8:00 PM 19 sep 2021'
         },
         {
             id: 89658,
-            name: 'Support Group',
-            details: 'Sopports Live Customers',
+            name: 'John Doe',
+            userName: 'John Doe',
+            email: 'john@example.com',
             date: '8:00 PM 19 sep 2021'
         }
     ];
-    const [group, setGroups] = useState(groups);
+    const [user, setUsers] = useState(users);
     return (
         <div className="container-fluid">
             <div className="row">
@@ -69,7 +77,7 @@ const ManageGroups = () => {
             </div>
 
 
-            <div className="col col-md-7 py-5 px-3 bg-light">
+            <div className="col col-md-7 px-3 py-5 bg-light">
 
                 <div className="d-flex justify-content-between">
                     <div>
@@ -81,19 +89,19 @@ const ManageGroups = () => {
                     </div>
                 </div>
 
-                <h5>Groups Summary</h5>
+                <h5>Roles Summary</h5>
 
                 <div className="d-flex justify-content-between">
 
-                <div className="d-flex summary-option">
+                    <div className="d-flex summary-option">
                         <div className="me-3">
                             <div className="icon">
                           <FaUserCog/>
                           </div>
                         </div>
                         <div>
-                          <h6>Total Groups</h6>
-                          <p>541 Groups</p>
+                          <h6>Roles 1</h6>
+                          <p>5 Roles</p>
                         </div>
                     </div>
 
@@ -104,32 +112,32 @@ const ManageGroups = () => {
                         </div>
                         </div>
                         <div>
-                          <h6>This Year</h6>
-                          <p>541 Groups</p>
+                          <h6>Roles 2</h6>
+                          <p>1 Roles</p>
                         </div>
                     </div>
 
                     <div className="d-flex summary-option">
                         <div className="me-3">
                         <div className="icon">
-                          <FaUsers/>
+                          <FaSquarespace/>
                         </div>
                         </div>
                         <div>
-                          <h6>This Month</h6>
-                          <p>41 Groups</p>
+                          <h6>Roles 3</h6>
+                          <p>5 Roles</p>
                         </div>
                     </div>
 
                     <div className="d-flex summary-option">
                         <div className="me-3">
                         <div className="icon">
-                          <FaUsers/>
+                          <FaCircleNotch/>
                         </div>
                         </div>
                         <div>
-                          <h6>This Week</h6>
-                          <p>5 Groups</p>
+                          <h6>Roles 5</h6>
+                          <p>25 Roles</p>
                         </div>
                     </div>
                 </div>
@@ -150,32 +158,34 @@ const ManageGroups = () => {
                     <button className="add-btn">
                     
                     <i><FaPlus/></i>
-                        Add Group
+                        Add Roles
                     </button>
                 </div>
 
                 <div className="mt-5 mb-3 w-50 ms-auto">
 
-                   <div className="form-group has-search">
-                     <span className="form-control-feedback"><FaSearch/></span>
-                  <input type="text" style={{backgroundColor:"#E6E6E7"}} className="form-control" placeholder="Search"/>
-                   </div>
+                  <div className="form-group has-search">
+                   <span className="form-control-feedback"><FaSearch/></span>
+                     <input type="text" style={{backgroundColor:"#E6E6E7"}} className="form-control" placeholder="Search"/>
+                </div>
                 </div>
 
                 {/* Users Table */}
                 <Table striped bordered hover>
   <thead>
     <tr>
-      <th>Group Id</th>
-      <th>Group Name</th>
-      <th>Group Description</th>
+      <th>User Id</th>
+      <th>Name</th>
+      <th>User Name</th>
+      <th>Email</th>
       <th>Creation Date</th>
+      <th>User Details</th>
       <th>Action</th>
     </tr>
   </thead>
   <tbody>
   {
-        group.map(group => <GroupsTable group={group} />)
+        user.map(user => <UsersTable user={user} />)
   }
   </tbody>
 </Table>
@@ -192,4 +202,4 @@ const ManageGroups = () => {
     );
 };
 
-export default ManageGroups;
+export default ManageRoles;

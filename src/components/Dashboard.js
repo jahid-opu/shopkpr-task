@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
-import { FaUsers, FaUserCog, FaDownload, FaPlus, FaSearch } from "react-icons/fa";
+import { FaUsers, FaUserCog, FaDownload, FaPlus, FaSearch, FaSquarespace, FaCircleNotch } from "react-icons/fa";
 import { FormControl, InputGroup, Table } from 'react-bootstrap';
 import UsersTable from './UsersTable';
 
@@ -77,7 +77,7 @@ const Dashboard = () => {
             </div>
 
 
-            <div className="col col-md-7 p-3 bg-light">
+            <div className="col col-md-7 px-3 py-5 bg-light">
 
                 <div className="d-flex justify-content-between">
                     <div>
@@ -112,32 +112,32 @@ const Dashboard = () => {
                         </div>
                         </div>
                         <div>
-                          <h6>Admins</h6>
-                          <p>5 Users</p>
+                          <h6>Users</h6>
+                          <p>541 Users</p>
                         </div>
                     </div>
 
                     <div className="d-flex summary-option">
                         <div className="me-3">
                         <div className="icon">
-                          <FaUsers/>
+                          <FaSquarespace/>
                         </div>
                         </div>
                         <div>
-                          <h6>Admins</h6>
-                          <p>5 Users</p>
+                          <h6>Gropus</h6>
+                          <p>55 Groups</p>
                         </div>
                     </div>
 
                     <div className="d-flex summary-option">
                         <div className="me-3">
                         <div className="icon">
-                          <FaUsers/>
+                          <FaCircleNotch/>
                         </div>
                         </div>
                         <div>
-                          <h6>Admins</h6>
-                          <p>5 Users</p>
+                          <h6>Roles</h6>
+                          <p>25 Roles</p>
                         </div>
                     </div>
                 </div>

@@ -6,9 +6,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 import ManageGroups from './components/ManageGroups';
+import ManageRoles from './components/ManageRoles';
 
 function App() {
   return (
@@ -22,9 +24,11 @@ function App() {
           <ManageGroups/>
           </Route>
 
-          <Route path="/">
-          <Dashboard/>
+          <Route path="/dash-board/admin/manage-roles">
+          <ManageRoles/>
           </Route>
+
+          <Redirect to="/dash-board/admin/manage-user"/>
         </Switch>
     </Router>
   );

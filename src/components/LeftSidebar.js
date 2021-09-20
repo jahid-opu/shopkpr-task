@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const LeftSidebar = () => {
     return (
-        <div className="p-3">
+        <div className="py-5 px-3">
             <div>
                 <b style={{color: '#006838', fontSize: '25px'}}>ShopKpr</b>
             </div>
