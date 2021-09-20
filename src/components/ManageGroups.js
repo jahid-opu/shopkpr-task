@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
-import { FaUsers } from "react-icons/fa";
+import { FaUsers, FaUserCog,FaDownload, FaPlus,FaSearch } from "react-icons/fa";
 import { FormControl, InputGroup, Table } from 'react-bootstrap';
 import GroupsTable from './GroupsTable';
 
@@ -69,15 +69,15 @@ const ManageGroups = () => {
             </div>
 
 
-            <div className="col col-md-8 bg-light">
+            <div className="col col-md-7 p-3 bg-light">
 
                 <div className="d-flex justify-content-between">
                     <div>
-                    <h5>Dashboard // Admin</h5>
-                    <p>Add, Edit, Delete Users</p>
+                    <h5 style={{color:'#006838'}}>Dashboard // Admin</h5>
+                    <p style={{fontSize:'14px', color:'gray'}}>Add, Edit, Delete Users</p>
                     </div>
                     <div>
-                        <button className="btn btn-primary">Dashboard</button>
+                        <button style={{backgroundColor:'#006838', color:'white'}} className="btn">Dashboard</button>
                     </div>
                 </div>
 
@@ -85,68 +85,81 @@ const ManageGroups = () => {
 
                 <div className="d-flex justify-content-between">
 
-                    <div className="d-flex">
-                        <div>
-                          <FaUsers/>
+                <div className="d-flex summary-option">
+                        <div className="me-3">
+                            <div className="icon">
+                          <FaUserCog/>
+                          </div>
                         </div>
                         <div>
-                          <h6>Total Groups</h6>
-                          <p>555 Groups</p>
-                        </div>
-                    </div>
-
-                    <div className="d-flex">
-                        <div>
-                          <FaUsers/>
-                        </div>
-                        <div>
-                          <h6>This Year</h6>
-                          <p>255 Groups</p>
+                          <h6>Admins</h6>
+                          <p>5 Users</p>
                         </div>
                     </div>
 
-                    <div className="d-flex">
-                        <div>
+                    <div className="d-flex summary-option">
+                        <div className="me-3">
+                        <div className="icon">
                           <FaUsers/>
                         </div>
+                        </div>
                         <div>
-                          <h6>This Months</h6>
-                          <p>50 Groups</p>
+                          <h6>Admins</h6>
+                          <p>5 Users</p>
                         </div>
                     </div>
 
-                    <div className="d-flex">
-                        <div>
+                    <div className="d-flex summary-option">
+                        <div className="me-3">
+                        <div className="icon">
                           <FaUsers/>
                         </div>
+                        </div>
                         <div>
-                          <h6>This Week</h6>
-                          <p>5 Groups</p>
+                          <h6>Admins</h6>
+                          <p>5 Users</p>
+                        </div>
+                    </div>
+
+                    <div className="d-flex summary-option">
+                        <div className="me-3">
+                        <div className="icon">
+                          <FaUsers/>
+                        </div>
+                        </div>
+                        <div>
+                          <h6>Admins</h6>
+                          <p>5 Users</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="d-flex justify-content-between">
+                <div className="d-flex my-4 justify-content-between">
                     <div>
-                    <button className="btn btn-primary">
+                    <button className="download-btn">
+                    <i><FaDownload/></i>
                         Donwload CSV
                     </button>
 
-                    <button className="btn btn-primary">
+                    <button className="download-btn">
+                        <i><FaDownload/></i>
                         Donwload PDF
                     </button>
                     </div>
 
-                    <button className="btn btn-primary">
-                        Add Group
+                    <button className="add-btn">
+                    
+                    <i><FaPlus/></i>
+                        Add User
                     </button>
                 </div>
 
-                <div>
-                  <InputGroup className="mb-3">
-                       <InputGroup.Checkbox aria-label="Checkbox for following text input" />
-                       <FormControl aria-label="Text input with checkbox" />
-                  </InputGroup>
+                <div className="mt-5 mb-3 w-50 ms-auto">
+
+                   <div className="form-group has-search">
+                     <span className="form-control-feedback"><FaSearch/></span>
+                  <input type="text" style={{backgroundColor:"#E6E6E7"}} className="form-control" placeholder="Search"/>
+                   </div>
                 </div>
 
                 {/* Users Table */}
@@ -171,7 +184,7 @@ const ManageGroups = () => {
 
 
             {/* Right Sidebar */}
-            <div className="col col-md-2 bg-light">
+            <div className="col col-md-3">
                 <RightSidebar/>
             </div>
             </div>

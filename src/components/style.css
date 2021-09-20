@@ -1,5 +1,97 @@
 .manage {
-    background-color: green;
-    color:aqua;
+    background-color: #5FBF7A;
+    color:white;
     padding:10px;
+    margin-right: 10px;
+    border-radius:5px;
+}
+
+.left-side-bar li {
+    padding:10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.left-side-bar li span {
+    color:black;
+}
+
+.summary-option {
+    background-color:white;
+    padding:0px 30px;
+    border-radius:10px;
+    align-items:center;
+}
+.summary-option p{
+    font-size:14px;
+}
+.summary-option h6{
+    padding-top: 20px;
+}
+.summary-option .icon{
+    background-color:rgba(128, 128, 128, 0.199);
+    padding: 5px;
+    width:35px;
+    height:35px;
+    text-align: center;
+    border-radius:100%;
+    color: #006838;
+}
+.download-btn {
+    background-color: white ;
+    color: #006838;
+    border: 1px solid #006838;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.download-btn:hover{
+    background-color: #006838;
+    color: white ;
+}
+.download-btn i {
+    margin-right: 10px;
+}
+.add-btn{
+    background-color: #006838;
+    color: white ;
+    padding: 5px 20px;
+    border:none;
+    border-radius: 5px;
+}
+.add-btn i {
+    margin-right: 10px;
+    background-color: white;
+    padding: 2px 5px 3px 5px;
+    text-align: center;
+    border-radius:100%;
+    color: #006838;
+}
+
+
+
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #006838;
+    border: none;
+}
+
+th {
+    color: white;
+}
+thead {
+    background-color: #006838;
+
 }
